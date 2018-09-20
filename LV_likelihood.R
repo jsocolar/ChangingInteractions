@@ -158,7 +158,19 @@ text(Mmod.c$params$theta[,1], Mmod.c$params$theta[,2], labels = comm_sp, cex=.5)
 plot(Amod.c$params$theta[,1], Amod.c$params$theta[,2], pch="", xlab='LV1', ylab = 'LV2', main = 'Combined')
 text(Amod.c$params$theta[,1], Amod.c$params$theta[,2], labels = comm_sp, cex=.5)
 
+plot(Hmod.c$params$theta[,1], Hmod.c$params$theta[,2], pch="", xlab='LV1', ylab = 'LV2',
+     xlim = c(-3.2, 3.4), ylim = c(-2.5,2.5))
+points(Hmod.c$params$theta[,1], Hmod.c$params$theta[,2], cex=.5, pch=16)
+segments(Hmod.c$params$theta[,1], Hmod.c$params$theta[,2], 
+         Mmod.c$params$theta[,1], Mmod.c$params$theta[,2])
+text(Mmod.c$params$theta[,1], Mmod.c$params$theta[,2], labels = comm_sp, cex=.5)
 
+plot(Hmod.c$params$theta[,1], Hmod.c$params$theta[,2], pch="", xlab='LV1', ylab = 'LV2',
+     xlim = c(-3.2, 3.2), ylim = c(-3.2,3.2))
+points(Hmod.c$params$theta[,1], Hmod.c$params$theta[,2])
+segments(Hmod.c$params$theta[,1], Hmod.c$params$theta[,2], 
+         Mmod.c$params$theta[,1], Mmod.c$params$theta[,2])
+points(Mmod.c$params$theta[,1], Mmod.c$params$theta[,2], pch=16)
 
 
 
